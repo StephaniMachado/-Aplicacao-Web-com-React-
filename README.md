@@ -5,7 +5,7 @@ Este projeto consiste no desenvolvimento de uma aplicação web utilizando React
 
 A aplicação permite que o usuário realize login com sua conta Google, visualize suas informações básicas (nome, e-mail e foto) e acesse diferentes telas do sistema, incluindo uma tela de apresentação dos desenvolvedores e uma tela de cadastro com geração de dados em formato JSON.
 
----
+----
 
 ## 🚀 Tecnologias Utilizadas
 
