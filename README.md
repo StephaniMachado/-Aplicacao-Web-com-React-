@@ -40,6 +40,6 @@ A aplicação permite que o usuário realize login com sua conta Google, visuali
 ---
 
 
-### 1. Clonar o repositório
+### 1. Link para a aplicação
+https://aplicacao-web-com-react.vercel.app/
 
-git clone https://github.com/StephaniMachado/-Aplicacao-Web-com-React-.git
