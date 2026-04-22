@@ -13,21 +13,17 @@ type User = {
 function App() {
 
   const [user, setUser] = useState<User | null>(() => {
-
     const savedUser = localStorage.getItem("user")
-
     return savedUser ? JSON.parse(savedUser) : null
-
   })
+
+ 
+  const [reloadKey, setReloadKey] = useState(0)
 
 
   function login(credentialResponse: any) {
-
     if (credentialResponse.credential) {
-
-      const decoded = jwtDecode<User>(
-        credentialResponse.credential
-      )
+      const decoded = jwtDecode<User>(credentialResponse.credential)
 
       setUser(decoded)
 
@@ -35,31 +31,24 @@ function App() {
         "user",
         JSON.stringify(decoded)
       )
-
     }
-
   }
-
 
   function logout() {
-
     googleLogout()
-
     setUser(null)
-
     localStorage.removeItem("user")
 
+    
+    setReloadKey(prev => prev + 1)
   }
 
-
   return (
-
-    <div className="integrantes-container">
+    <div className="integrantes-container" key={reloadKey}>
 
       {!user ? (
 
         /* TELA LOGIN */
-
         <div className="fade">
 
           <h1>Login</h1>
@@ -72,9 +61,7 @@ function App() {
 
             <GoogleLogin
               onSuccess={login}
-              onError={() =>
-                console.log("Erro login")
-              }
+              onError={() => console.log("Erro login")}
             />
 
           </div>
@@ -84,16 +71,13 @@ function App() {
       ) : (
 
         /* TELA HOME */
-
         <div className="fade">
 
           <h1>Home</h1>
 
           <div className="integrantes-card">
 
-            <h2>
-              Bem-vindo, {user.name}!
-            </h2>
+            <h2>Bem-vindo, {user.name}!</h2>
 
             <img
               src={user.picture}
@@ -116,15 +100,11 @@ function App() {
                 Sair
               </button>
 
-
               <Link to="/integrantes">
-
                 <button className="botao-voltar">
                   Integrantes
                 </button>
-
               </Link>
-
 
               <Link
                 to="/cadastro"
@@ -133,11 +113,9 @@ function App() {
                   email: user.email
                 }}
               >
-
                 <button className="botao-voltar">
                   Cadastro
                 </button>
-
               </Link>
 
             </div>
@@ -149,9 +127,7 @@ function App() {
       )}
 
     </div>
-
   )
-
 }
 
 export default App
