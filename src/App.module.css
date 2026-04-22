@@ -1,0 +1,19 @@
+.container{
+ text-align:center;
+ margin-top:50px;
+}
+
+.userInfo{
+ margin-top:30px;
+}
+
+.profilePicture{
+ width:120px;
+ border-radius:50%;
+ margin:20px;
+}
+
+.logoutButton{
+ padding:10px 20px;
+ cursor:pointer;
+}

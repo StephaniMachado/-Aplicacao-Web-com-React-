@@ -1,0 +1,101 @@
+.integrantes-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* 🔥 muda isso */
+  background: #ffffff;
+  color: #1e293b;
+  padding: 20px;
+}
+
+.integrantes-container h1 {
+  font-size: 34px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* 🔥 NOVO CONTAINER PARA OS CARDS */
+.cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* 🔥 AJUSTE NO CARD */
+.integrantes-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 25px;
+  border-radius: 14px;
+  margin: 10px;
+  max-width: 420px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.integrantes-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.integrantes-card h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #2563eb;
+}
+
+.integrantes-card p {
+  font-size: 15px;
+  color: #475569;
+}
+
+.botao-voltar {
+  margin-top: 30px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botao-voltar:hover {
+  background: #1d4ed8;
+  transform: scale(1.05);
+}
+
+.fade {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.foto {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
