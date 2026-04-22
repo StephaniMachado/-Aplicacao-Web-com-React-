@@ -15,8 +15,8 @@ A aplicação permite que o usuário realize login com sua conta Google, visuali
 - React Router DOM
 - @react-oauth/google
 - JavaScript
-- HTML5
-- CSS3
+- HTML
+- CSS
 
 ---
 
